@@ -54,7 +54,7 @@ void InitializeDataChannelManager(void)
 	ChannelManager_AddChannel(10 , INA219_SOLAR_VOLTAGE 	, ANALOG_INPUT_CHANNEL, FLOAT_TYPE, 60000   , 2000, 3,   	218 );
 	ChannelManager_AddChannel(10 , BME280_HUMIDITY			, ANALOG_INPUT_CHANNEL,	FLOAT_TYPE,	60000	, 2000, 3,		220 );
 
-
+#if 0
 	Modbus_AddRegister(300, INPUT_REGISTER_TYPE); /* 15. cihaz device ID */
 	Modbus_AddRegister(301, INPUT_REGISTER_TYPE); /* 15. Cihaz RSSI value */
 	ChannelManager_AddChannel(15 , BME280_TEMPERATURE		, ANALOG_INPUT_CHANNEL,	FLOAT_TYPE,	60000	, 2000, 3,		302);
@@ -100,9 +100,9 @@ void InitializeDataChannelManager(void)
 	ChannelManager_AddChannel(25 , INA219_SOLAR_CURRENT 	, ANALOG_INPUT_CHANNEL, FLOAT_TYPE, 60000   , 2000, 3,   	514);
 	ChannelManager_AddChannel(25 , INA219_SUPPLY_VOLTAGE 	, ANALOG_INPUT_CHANNEL, FLOAT_TYPE, 60000   , 2000, 3,   	516);
 	ChannelManager_AddChannel(25 , INA219_SOLAR_VOLTAGE 	, ANALOG_INPUT_CHANNEL, FLOAT_TYPE, 60000   , 2000, 3,   	518);
-	ChannelManager_AddChannel(25 , BME280_HUMIDITY			, ANALOG_INPUT_CHANNEL,	FLOAT_TYPE,	60000	, 2000, 3,		520);
+	ChannelManager_AddChannel(25 , BME280_HUMIDITY			, ANALOG_INPUT_CHANNEL,	FLOAT_TYPE,	60000	, 2000, 3,		520);*/
 
-
+#endif
 
 	pthread_attr_init(&tattr);
 	int ret;
