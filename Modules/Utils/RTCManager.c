@@ -142,9 +142,6 @@ void RTC_GetDateString(DateFormat_t format)
 
 	HAL_RTC_GetTime(&hrtc,&sTime,FORMAT_BIN);
 	HAL_RTC_GetDate(&hrtc,&sDate,FORMAT_BIN);
-
-
-
 	if(format == DATE_FORMAT_1)
 	{
 

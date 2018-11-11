@@ -8,7 +8,13 @@
 
 #include "Radio_Services.h"
 
-void Radio_SendDataChannelSetValuesRequest(unitNo_t deviceID,uint8_t channelCount, uint8_t *channelIDs,float *channelValues,uint16_t messageTimeout,uint8_t messageRetry)
+void Radio_SendDataChannelSetValuesRequest(	unitNo_t deviceID,
+											uint8_t channelCount, 
+											uint8_t *channelIDs,
+											float *channelValues,
+											uint16_t messageTimeout,
+											uint8_t messageRetry
+											)
 {
 
 	if(channelCount > MAX_DATA_CHANNEL_MESSAGE_CHANNEL_COUNT)
@@ -37,7 +43,12 @@ void Radio_SendDataChannelSetValuesRequest(unitNo_t deviceID,uint8_t channelCoun
 							CHANNEL_MANAGER);
 }
 
-void Radio_SendDataChannelGetValuesRequest(unitNo_t deviceID,uint8_t channelCount,uint8_t *channelIDs,uint16_t messageTimeout,uint8_t messageRetry)
+void Radio_SendDataChannelGetValuesRequest( unitNo_t deviceID, 
+											uint8_t channelCount,
+											uint8_t *channelIDs,
+											uint16_t messageTimeout,
+											uint8_t messageRetry
+											)
 {
 	if(channelCount > MAX_DATA_CHANNEL_MESSAGE_CHANNEL_COUNT)
 	{

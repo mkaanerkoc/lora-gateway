@@ -327,7 +327,8 @@ bool stepMessageQueue(MessageQueueStepReason reason)
 					if(queueElement != NULL)
 					{
 						//PARAMETRE CHECK BURAYA EKLENCEK
-						resultOfSendPackageTemp = Radio_Send_Package(	queueElement->destinationUnit,
+						resultOfSendPackageTemp = Radio_Send_Package(	
+								queueElement->destinationUnit,
 								queueElement->mainHeader.messageType,
 								queueElement->serviceType,
 								queueElement->messageData,
@@ -369,7 +370,8 @@ bool stepMessageQueue(MessageQueueStepReason reason)
 					queueElement = getMessageQueueElementByIndex(loraMessageQueueHeadIndex);
 					if(queueElement != NULL)
 					{
-						resultOfSendPackageTemp = Radio_Send_Package(	queueElement->destinationUnit,
+						resultOfSendPackageTemp = Radio_Send_Package(	
+								queueElement->destinationUnit,
 								queueElement->mainHeader.messageType,
 								queueElement->serviceType,
 								queueElement->messageData,

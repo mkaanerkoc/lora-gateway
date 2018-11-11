@@ -89,7 +89,18 @@ LoRaMessageQueueElement 	loraMessageQueue[LORA_MESSAGE_QUEUE_SIZE];
 
 /* Function Prototypes */
 bool						Initialize_LoRaMessageQueue(void);
-bool						addNewMessageToQueue( unitNo_t destination, RadioMessageType messageType, RadioServiceType serviceType, RadioMessagePriority priority,uint8_t *data,uint8_t length,uint16_t timeout,uint8_t retryCount,bool allowOverwrite , RadioMessageSourceType  sourceTypeParam);
+bool						addNewMessageToQueue( 	unitNo_t destination, 
+													RadioMessageType messageType, 
+													RadioServiceType serviceType, 
+													RadioMessagePriority priority,
+													uint8_t *data,
+													uint8_t length,
+													uint16_t timeout,
+													uint8_t retryCount,
+													bool allowOverwrite, 
+													RadioMessageSourceType  
+													sourceTypeParam
+												);
 bool						clearAllMessageQueue(void);
 bool						clearMessageFromQueueByMessageID(uint16_t messageID);
 bool						clearMessageFromQueueByIndex(uint8_t index);
